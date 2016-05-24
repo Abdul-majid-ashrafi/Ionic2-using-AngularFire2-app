@@ -1,0 +1,15 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Home
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+   <h1>Ionic2 using AngularFire2 app</h1>
+  
+  <ul>
+ <li *ngFor="#item of videoItems | async">
+ {{item.name}}
+ </li>
+  </ul>
+</ion-content>
