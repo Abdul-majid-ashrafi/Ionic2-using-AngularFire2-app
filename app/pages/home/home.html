@@ -1,15 +1,21 @@
-<ion-navbar *navbar>
+<ion-navbar *navbar secondary>
   <ion-title>
-    Home
+    <center>Quiz section</center>
   </ion-title>
 </ion-navbar>
 
 <ion-content class="home">
-   <h1>Ionic2 using AngularFire2 app</h1>
-  
-  <ul>
- <li *ngFor="#item of videoItems | async">
- {{item.name}}
- </li>
-  </ul>
-</ion-content>
+
+  <ion-list radio-group *ngIf="data" [(ngModel)]="abc">
+    
+    <div class="item item-text-wrap">
+      {{data.quiz}}?
+    </div>
+    <hr/>
+    <ion-item *ngFor="#op of data.options">
+      <ion-label>{{op}}</ion-label>
+      <ion-radio value="{{op}}"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <button (click)="next(abc)">Next</button>
+  </ion-content>

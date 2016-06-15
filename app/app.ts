@@ -1,6 +1,9 @@
 import {App, Platform} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
+import {AuthPage} from './pages/auth/auth';
+// import {QuizPage} from './pages/addQuiz/addQuiz';
+
 
 import {FIREBASE_PROVIDERS, defaultFirebase} from 'angularfire2';
 
@@ -9,7 +12,7 @@ import {FIREBASE_PROVIDERS, defaultFirebase} from 'angularfire2';
   template: '<ion-nav [root]="rootPage"></ion-nav>',
   providers:[
         FIREBASE_PROVIDERS,
-        defaultFirebase('https://draganddropsdk.firebaseio.com/')],
+        defaultFirebase('https://quizsapplication.firebaseio.com/quizApp/')],
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 export class MyApp {
